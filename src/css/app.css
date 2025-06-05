@@ -21,6 +21,13 @@
   color: var(--back-grey);
 }
 
+.menu-font {
+  color: var(--back-grey);
+  margin: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .menu-list {
   border-radius: 10px;
   color: var(--back-grey);
