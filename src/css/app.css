@@ -1,1 +1,41 @@
 /* app global css */
+
+:root {
+  --primary: #2e3a59;
+  --secondary: #226ed8;
+  --dark: #4f46e5;
+  --positive: #14b8a6;
+  --negative: #f43f5e;
+  --info: #38bdf8;
+  --warning: #f59e0b;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --back-grey: #f9fafb;
+}
+
+.bg-background {
+  background: var(--back-grey);
+}
+
+.the-background {
+  color: var(--back-grey);
+}
+
+.menu-list {
+  border-radius: 10px;
+  color: var(--back-grey);
+  margin: 5px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.menu-list:hover {
+  background: rgb(34, 110, 216, 0.4);
+  color: var(--back-grey);
+  cursor: pointer;
+}
+
+.menu-list.active {
+  background: var(--secondary);
+  color: var(--back-grey);
+}
