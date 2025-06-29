@@ -11,6 +11,55 @@
   --text-dark: #111827;
   --text-muted: #6b7280;
   --back-grey: #f9fafb;
+  --cool-grey: #9f9fad;
+  --light-cool-grey: rgb(159, 159, 173, 0.25);
+  --columbia-blue: #aecfdf;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.avatar-class {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.text-h6,
+.text-subtitle1,
+.text-subtitle2,
+.text-body1,
+.text-body2,
+.text-caption,
+.text-overline,
+.text-button {
+  font-family: 'Inter', sans-serif;
+}
+
+.text-h1,
+.text-h2 {
+  font-weight: 700;
+}
+.text-h3,
+.text-h4 {
+  font-weight: 600;
+}
+.text-body1,
+.text-body2,
+.text-subtitle1 {
+  font-weight: 400;
+}
+.text-caption,
+.text-overline {
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
 }
 
 .bg-background {
@@ -21,10 +70,18 @@
   color: var(--back-grey);
 }
 
+.bg-cool-grey {
+  background: var(--cool-grey);
+}
+
+.bg-cool-grey-light {
+  background: rgb(249, 250, 251, 0.6);
+}
+
 .menu-font {
   color: var(--back-grey);
   margin: 5px;
-  font-size: 20px;
+  font-size: larger;
   font-weight: 500;
 }
 
@@ -45,4 +102,72 @@
 .menu-list.active {
   background: var(--secondary);
   color: var(--back-grey);
+}
+
+.tech-badge {
+  background-color: #eef;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin: 2px;
+}
+
+.Internal-badge {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin: 2px;
+}
+
+.Demo-badge {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin: 2px;
+}
+
+.snow,
+.snow::before,
+.snow::after {
+  position: absolute;
+  top: -600px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image:
+    radial-gradient(6px 6px at 100px 150px, rgba(174, 207, 223, 0.7) 50%, rgba(0, 0, 0, 0)),
+    radial-gradient(5px 5px at 200px 300px, rgba(174, 207, 223, 0.8) 50%, rgba(0, 0, 0, 0)),
+    radial-gradient(7px 7px at 400px 500px, rgba(174, 207, 223, 0.6) 50%, rgba(0, 0, 0, 0)),
+    radial-gradient(8px 8px at 300px 100px, rgba(174, 207, 223, 0.5) 50%, rgba(0, 0, 0, 0));
+  /* Add ~70 similar lines for full density */
+  background-size: 600px 600px;
+  animation: snow 3s linear infinite;
+  content: '';
+}
+
+.snow::after {
+  margin-left: -200px;
+  opacity: 0.4;
+  animation-duration: 6s;
+  animation-direction: reverse;
+  filter: blur(3px);
+}
+
+.snow::before {
+  margin-left: -300px;
+  opacity: 0.65;
+  animation-duration: 9s;
+  animation-direction: reverse;
+  filter: blur(1.5px);
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(600px);
+  }
 }
